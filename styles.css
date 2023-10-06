@@ -1,0 +1,629 @@
+
+                                                                                              /* CSS RESET START */
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	font: inherit;
+	vertical-align: baseline;
+  
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+                                                                                                 /* CSS RESET END */
+
+
+
+                                                                                                /* CSS ROOT START */
+
+:root {
+    --colortoggle-1: grey;
+    --colortoggle-2: whitesmoke;
+    --colortoggle-3:#ffa622;
+    --colortoggle-4: black;
+    --colortoggle-5: black;
+    --colortoggle-6: #333;
+    --colortoggle-7: whitesmoke;
+    --colortoggle-8: rgb(128, 128, 128);
+    --colortoggle-9: #5f0005;
+
+  
+    --bar-width: clamp(.2rem, 3.5vw, 10rem);
+    --bar-height: clamp(.2rem, .7vw, 10rem);
+    --hamburger-gap: clamp(.2rem, .5vw, .6rem);
+    --color: white;
+    --color-hover: #5f0005;
+    --hamburger-margin: clamp(.5rem, 2vw, 5.6rem);
+    --hamburger-animate: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2); /* height of entire hamburger; burger height of 3 bars, 2 gaps = 3x bar length + 2x gap */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+html {
+scroll-behavior: smooth;
+
+}
+
+
+
+                                                                                                 /* CSS ROOT END */
+
+
+
+                                                                                               /* CSS STYLES START */
+
+
+
+
+                                                                   /* Landing/Welcome SECTION */
+
+
+#landing {
+    position: relative;
+    height: 100vh;
+
+}
+
+
+#video {
+    position: relative;
+    width: 100vw;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    height: 100vh;
+    object-fit: cover;
+
+}
+
+
+#overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 28, 94, 0.227); 
+    z-index: 2;
+}
+
+#title{ 
+    position: absolute;
+    background-image: url("images/NB_titleB.svg");
+    background-size: 100%;   
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: 3;
+    top: -2%;
+    
+    
+}
+
+/* DIV Break */
+
+#about{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#videotwo{
+    width: 100vw;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    object-fit: cover;
+
+}
+
+#overlaytwo {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 28, 94, 0.227); 
+    z-index: 2;
+}
+
+.Synopsis{
+    position: absolute;
+    z-index: 3;
+    top: 10%;
+    left: 2.5%;
+}
+
+h2{
+    color: var(--colortoggle-9);
+    font-size: clamp(.6rem, 5vw, 9.6rem);  
+    font-family: "futura-pt-bold", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+.Psynopsis{
+    /* outline: 2px solid blue; */
+    position: absolute;
+    z-index: 3;
+    top: 25%;
+    width: 70%;
+
+}
+
+.Psynopsis p:nth-child(2){
+    padding-top: clamp(0.5rem, 1.5vw, 2rem);
+
+}
+
+#about p {
+    text-align: justify;
+    color: var(--colortoggle-2);
+    font-size: clamp(0.2rem, 2vw, 3.6rem);   
+    font-family: "amplitude-compressed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2.6vw;
+    
+    
+}
+
+/* Landing Page Buttons */
+
+#buttons {
+    /* outline: 2px solid red; */
+    width: 40%;
+    height: 20%;
+    z-index: 5;
+    position: absolute;
+    top: 73%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#buttons button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+button svg{
+   width: clamp(.5rem, 5.5vw, 8rem);
+   height: clamp(.5rem, 5.5vw, 8rem);
+
+}
+
+.Btext{
+    position: absolute;
+    top: 75%; 
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Make it fully transparent */
+    transition: opacity 0.3s, visibility 0.3s; 
+    font-size: clamp(0.25rem, 1.5vw, 3.0rem);
+    font-family: "futura-pt-bold", sans-serif;
+    color: var(--colortoggle-2);
+    /* outline: 2px solid red; */
+
+}
+
+button:hover .Btext {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+                                                                   /* Chapters SECTION */
+                              
+body{
+    background-image: url("images/Artboard 1.png");
+
+}
+
+#header{
+    position: relative;
+    /* outline: 2px solid green; */
+    height: 15vw;
+}
+                                                                   
+
+
+#brand{
+    position: absolute;
+    background-image: url("images/NB_titleB.svg");
+    background-position: left 50% bottom;
+    background-size: contain;   
+    width: 50%;
+    height: 160%;
+    background-repeat: no-repeat;
+    z-index: 3;
+    /* outline: 2px solid red; */
+    left: 25%;
+    bottom: -20%;
+
+}
+
+#brand span{
+    position: absolute;
+    top: 65%; 
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+
+    font-size: clamp(0.25rem, 1.5vw, 3.0rem);
+    font-family: "futura-pt-bold", sans-serif;
+    color: var(--colortoggle-2);
+
+
+}
+
+/* Hamburger Menu */
+
+
+.hamburger{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--hamburger-gap);
+    width: max-content; /* width only takes up where content is, not the entire flex box */
+    /* background-color: #5f0005; */
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    cursor: pointer;
+    z-index: 10;
+
+    --x-width: calc(var(--hamburger-height) * 1.41421356237) /* this number because transform using right angle; using this to figure out good length for the diagonal line of the X finish */
+}
+
+
+
+.hamburger::before,
+.hamburger::after,
+.hamburger input{
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--color);
+    border-radius: 9000px;
+    transform-origin: left center;
+    transition: opacity var(--hamburger-animate), width var(--hamburger-animate), rotate var(--hamburger-animate), translate var(--hamburger-animate), background-color var(--hamburger-animate);
+    
+
+}
+
+.hamburger:has(:hover)::before{
+    background-color: var(--color-hover);
+
+}
+
+.hamburger:has(:hover)::after{
+    background-color: var(--color-hover);
+
+}
+
+.hamburger:has(:hover) input{
+    background-color: var(--color-hover);
+
+}
+
+.hamburger:has(input:checked)::after {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2); /* offset in y (0 for x) for the line; half of the height of the burger */
+    background-color: var(--color-hover);
+}
+
+.hamburger:has(input:checked)::before { 
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2); /* offset in y (0 for x) for the line; half of the height of the burger */
+    background-color: var(--color-hover);
+}
+
+.hamburger input:checked{ /* only affecting the "middle" bar bc of this input selector */
+    opacity: 0;
+    width: 0;
+    background-color: var(--color-hover);
+}
+
+
+.hamburger input{
+    appearance: none; /* remove checkbox; works differently from display: none */
+    padding: 0;  /* disable default spacing */
+    margin: 0;  /* disable default spacing */
+    outline: none; /* no weird outline on lines */
+    pointer-events: none; /* leaves interaction to entire label element */
+
+}
+
+
+/* Buttons/NAV */
+
+#buttons-chapters {
+    /* outline: 2px solid red; */
+    width: max-content;
+    height: 20%;
+    z-index: 5;
+    position: absolute;
+    top: 10.5%;
+    display: flex;
+    justify-content: center;
+    gap: clamp(.1rem, 3vw, 10rem);
+    transition: 300ms ease-in-out;
+    transform: translateX(-100%);
+    visibility: hidden;
+}
+
+
+
+#buttons-chapters.show {
+    transform: translateX(40%);
+    visibility: visible;
+}
+
+#buttons-chapters button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.CBtext{
+    position: absolute;
+    top: 135%; 
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Make it fully transparent */
+    transition: opacity 0.3s, visibility 0.3s; 
+    font-size: clamp(0.25rem, 1.25vw, 3.0rem);
+    font-family: "futura-pt-bold", sans-serif;
+    color: var(--colortoggle-2);
+    /* outline: 2px solid red; */
+
+}
+
+button:hover .CBtext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#buttons-chapters svg{
+    width: clamp(.5rem, 3.5vw, 8rem);
+    height: clamp(.5rem, 3.5vw, 8rem);
+ 
+ }
+
+ @media (max-width: 700px){
+    #buttons-chapters {
+       
+        gap: clamp(.01rem, .1vw, 10rem);
+        
+    }
+
+
+ }
+
+
+ /* CAROUSEL */
+
+ main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+ }
+
+
+ #chapters{
+    max-width: 1200px;
+    width: 95%;
+    /* background-color: #5f0005; */
+ }
+
+ .carouselwrapper{
+    /* background-color: #5f0005; */
+    position: relative;
+    top: 3rem;
+ }
+
+.chapters-list .centerchapter img {
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.8;
+}
+
+.chapters-list .centerchapter img.active,
+.chapters-list .centerchapter:hover img {
+    transform: scale(1.2);
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+ .carouselbutton{
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 3rem !important; /* controls only the chevron size; not the background/whole thing */
+   transition: 300ms ease-in-out;
+   color: #5f0005;
+
+ }
+
+ #leftslide{
+    left: -7rem;
+    /* display: none; */
+    z-index: 11;
+ }
+
+ #rightslide{
+    right: -7rem;
+    z-index: 11;
+
+ }
+
+ .carouselbutton:hover{
+    transform: scale(2);
+ }
+
+.chapters-list{
+    display: grid;
+    grid-template-columns: repeat(6, 440px);
+    overflow-x: auto;
+    font-size: 0;
+    margin-bottom: 30px;
+    overflow-y: hidden;
+    scrollbar-width: none;
+
+}
+
+.chapters-list::-webkit-scrollbar{
+    display: none;
+
+}
+
+.chapter{
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+
+}
+
+
+.scrollslider{ /* entire scrollbar */
+    height: 24px;
+    width: 100%;
+    /* background: red; */
+    display: flex;
+    align-items: center;
+
+}
+
+.scrolltrack{ /* "runway" of the scrollslider where thumb "runs over"; includes the thumb */
+    height: 2px;
+    width: 100%;
+    background: white;
+    position: relative;
+    border-radius: 4.5px;
+}
+
+.scrolltrack:hover{ 
+    height: 4px;
+
+}
+
+
+.scrollthumb{ /* the part u move in scrollbar */
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: var(--color-hover);
+    border-radius: inherit;
+    cursor: grab;
+
+}
+
+.scrollthumb:active{
+    cursor: grabbing;
+    height: 8px;
+    top: -2px; /* offset for no break design */
+
+}
+
+.scrollthumb::after{ /* add space to easier grab the scrollthumb */
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+
+}
+
+
+@media (max-width: 1450px) {
+
+    .carouselbutton{
+        
+        top: 100%;
+  
+     }
+
+    #leftslide{
+        left: 0;
+    
+     }
+    
+     #rightslide{
+        right: 0;
+        
+    
+     }
+
+
+}
+
+
+
+
+
