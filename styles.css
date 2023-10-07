@@ -84,11 +84,14 @@ table {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
 html {
-scroll-behavior: smooth;
-
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -102,7 +105,7 @@ scroll-behavior: smooth;
 
 
 
-                                                                   /* Landing/Welcome SECTION */
+                                                                   /* Landing/Welcome PAGE */
 
 
 #landing {
@@ -148,7 +151,7 @@ scroll-behavior: smooth;
     
 }
 
-/* DIV Break */
+/* About Section */
 
 #about{
     position: relative;
@@ -218,7 +221,7 @@ h2{
     
 }
 
-/* Landing Page Buttons */
+/* NAV/Buttons */
 
 #buttons {
     /* outline: 2px solid red; */
@@ -261,6 +264,11 @@ button svg{
 
 }
 
+.Btext:has(span) span{
+    color: #5f0005;
+
+ }
+
 button:hover .Btext {
     visibility: visible;
     opacity: 1;
@@ -268,12 +276,36 @@ button:hover .Btext {
 
 
 
-                                                                   /* Chapters SECTION */
-                              
-body{
+                                                                   /* Chapters PAGE */
+                                  
+
+#chaptersbody > video{
+    /* background-color: green; */
+    width: 100%;
+    z-index: 1;
+    object-fit: cover;
+    position: fixed; /* Keeps the video in the same position in the viewport no matter what. A fixed position. SOLVED the BG video bug whitespace overflow -> still there this is a workaround. */
+    z-index: -1;
+    height: 100%;
+    outline: 2px solid red;
+}
+
+#overlay3 {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 20, 68, 0.227); 
+    z-index: -1;
+}
+
+/* #chaptersbody{
     background-image: url("images/Artboard 1.png");
 
-}
+} */
+
 
 #header{
     position: relative;
@@ -450,6 +482,11 @@ button:hover .CBtext {
  
  }
 
+ .CBtext:has(span) span{
+    color: #5f0005;
+
+ }
+
  @media (max-width: 700px){
     #buttons-chapters {
        
@@ -459,7 +496,6 @@ button:hover .CBtext {
 
 
  }
-
 
  /* CAROUSEL */
 
@@ -542,12 +578,6 @@ button:hover .CBtext {
 
 }
 
-.chapter{
-    width: 325px;
-    height: 400px;
-    object-fit: cover;
-
-}
 
 
 .scrollslider{ /* entire scrollbar */
@@ -622,6 +652,22 @@ button:hover .CBtext {
 
 
 }
+
+
+
+                                                                   /* News PAGE */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
