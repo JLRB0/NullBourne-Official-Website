@@ -1,7 +1,7 @@
 
 "use strict";
 
-var NEWS_ENDPOINT = "/misc/news.json";
+var NEWS_ENDPOINT = "misc/news.json";
 
 var newsContainer = document.getElementById("newsContainer");
 var newsTitle = document.getElementById("newsTitle");
