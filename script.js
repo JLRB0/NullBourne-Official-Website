@@ -1,14 +1,21 @@
+"use strict";
+
 // Landing page links
 
 function navigateToPage(url) {
     window.location.href = url;
 }
 
-// Chapters SECTION; Button Animate In
+// Navs Button Animate In
 
 function buttonAnimate() {
     var element = document.getElementById("buttons-chapters");
     element.classList.toggle('show');
+}
+
+function buttonAnimateNewsPage() {
+    var element = document.getElementById("buttons-chapters");
+    element.classList.toggle('newspagenav');
 }
 
     
