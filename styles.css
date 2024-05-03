@@ -766,6 +766,8 @@ button:hover .CBtext {
 #nonews h2 {
     font-family: "futura-pt-bold", sans-serif;
     font-variant: small-caps;
+    font-size: 50px;
+    padding-right: 50px;
 
 }
 
