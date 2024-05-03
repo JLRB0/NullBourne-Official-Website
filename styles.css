@@ -674,7 +674,6 @@ button:hover .CBtext {
 #newsbody > video{
     /* background-color: green; */
     width: 100%;
-    z-index: 1;
     object-fit: cover;
     position: fixed; /* Keeps the video in the same position in the viewport no matter what. A fixed position. SOLVED the BG video bug whitespace overflow -> still there this is a workaround. */
     z-index: -1;
@@ -741,6 +740,40 @@ button:hover .CBtext {
 
 .post .postContent {
     font-size: 30px;
+}
+
+/* For nonews UI */
+
+#newsmain {
+    /* background-color: aqua; */
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    
+}
+
+#nonews{
+    /* background-color: #ffa622; */
+    width: fit-content;
+    height: fit-content;
+
+}
+
+#nonews h2 {
+    font-family: "futura-pt-bold", sans-serif;
+    font-variant: small-caps;
+
+}
+
+#nonews:hover {
+    opacity: 50%;
+    transition-duration: 1s;
+    cursor:default;
+
 }
 
 

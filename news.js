@@ -37,12 +37,6 @@ $(document).ready(function() {
         }
     });
 
-    if (window.localStorage.getItem("userName") == null) {
-        var name = prompt("What's your name?");
-        window.localStorage.setItem("userName", name);
-    }
-
-    newsTitle.innerText = "Welcome, " + window.localStorage.getItem("userName");
 });
 
 
