@@ -523,6 +523,81 @@ button:hover .CBtext {
 
  }
 
+                /* NewsPage Buttons/NAV */
+
+    
+#buttons-newspage {
+    /* outline: 2px solid red; */
+    width: max-content;
+    height: 20%;
+    z-index: 5;
+    position: absolute;
+    top: 10.5%;
+    display: flex;
+    justify-content: center;
+    gap: clamp(.1rem, 3vw, 10rem);
+    transition: 300ms ease-in-out;
+    transform: translateX(-100%);
+    visibility: hidden;
+}
+
+
+
+#buttons-newspage.newspagenav {
+    transform: translateX(30%);
+    visibility: visible;
+}
+
+#buttons-newspage button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.CBtextNewsPage{
+    position: absolute;
+    top: 135%; 
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Make it fully transparent */
+    transition: opacity 0.3s, visibility 0.3s; 
+    font-size: clamp(0.25rem, 1.25vw, 3.0rem);
+    font-family: "futura-pt-bold", sans-serif;
+    color: var(--colortoggle-2);
+    /* outline: 2px solid red; */
+
+}
+
+button:hover .CBtextNewsPage {
+    visibility: visible;
+    opacity: 1;
+}
+
+#buttons-newspage svg{
+    width: clamp(.5rem, 3.5vw, 8rem);
+    height: clamp(.5rem, 3.5vw, 8rem);
+ 
+ }
+
+ .CBtextNewsPage:has(span) span{
+    color: #5f0005;
+
+ }
+
+ @media (max-width: 700px){
+    #buttons-newspage {
+       
+        gap: clamp(.01rem, .1vw, 10rem);
+        
+    }
+
+
+ }
+
  /* CAROUSEL */
 
  main{
@@ -708,7 +783,7 @@ button:hover .CBtext {
     padding-right: 5em;
     margin-top: 5rem;
     margin-bottom: 8rem;
-    /* background-color: green; */
+    /* background-color: rgb(255, 208, 0); */
     
 }
 
@@ -718,6 +793,7 @@ button:hover .CBtext {
     color: white;
     border-radius: 20px;
     margin: 5rem;
+    /* background-color: rgb(255, 255, 255); */
 }
 
 
@@ -726,6 +802,7 @@ button:hover .CBtext {
     height: 100%;
     background-size: cover;
     border-radius: 50px;
+    /* background-color: rgb(255, 0, 0); */
     
 }
 
@@ -742,19 +819,23 @@ button:hover .CBtext {
     flex-direction: column;
     gap: 30px;
     padding-left: 30px;
+    /* background-color: rgb(132, 45, 212); */
 }
 
 .post .postTitle {
     font-family: "futura-pt-bold";
     font-size: 50px;
+    /* background-color: rgb(0, 183, 255); */
 }
 
 .post .postDate {
     font-size: 22px;
+    /* background-color: green; */
 }
 
 .post .postContent {
     font-size: 30px;
+    /* background-color: rgb(200, 255, 0); */
 }
 
 /* News Sort UI */
@@ -928,12 +1009,12 @@ button:hover .CBtext {
 
             /* NAV */
 
- #buttons-chapters.newspagenav {
-
-    transform: translateX(30%);
+ /* #buttons-chapters.newspagenav {
     visibility: visible;
+    transform: translateX(30%);
+    
 
-}
+} */
 
 
 /* Body */
@@ -1021,6 +1102,20 @@ button:hover .CBtext {
 /* Index.html */
 
 @media (max-width: 768px) {
+
+    #title{ 
+        position: absolute;
+        background-image: url("images/NB_titleB.svg");
+        background-size: 100%;   
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        z-index: 3;
+        top: -2%;
+        background-position: center;
+        
+        
+    }
 
     #about{
         padding: 0rem;
@@ -1123,7 +1218,7 @@ button:hover .CBtext {
 
 .CBtext.two {
     
-    left: 175%; /* Center horizontally */
+    left: 180%; /* Center horizontally */
     
 
 }
@@ -1221,8 +1316,8 @@ button:hover .CBtext {
     
     
     .post .thumbnail {
-        width: 7rem;
-        height: 7rem;
+        width: 10rem;
+        height: 10rem;
         background-size: cover;
         border-radius: 50px;
         
@@ -1339,16 +1434,60 @@ button:hover .CBtext {
 
         /* NAV */
     
-#buttons-chapters.newspagenav {
 
-    transform: translate(20%, 150%);
+#buttons-newspage {
+    /* outline: 2px solid red; */
+    width: max-content;
+    height: 20%;
+    z-index: 5;
+    position: absolute;
+    top: 10.5%;
+    display: flex;
+    justify-content: center;
+    gap: clamp(.1rem, 3vw, 10rem);
+    transition: 300ms ease-in-out;
+    transform: translateX(-100%);
+    visibility: hidden;
+}
+
+
+#buttons-newspage button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
 
 }
 
-.CBtext.one.responsiveNewsPage {
-    left: 143%;
+
+
+#buttons-newspage.newspagenav {
+    transform: translate(25%);
+    visibility: visible;
+}
+
+.CBtextNewsPage {
+    position: absolute;
+    top: 170%; 
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+    opacity: 1;
+    visibility: visible; 
+    font-size: clamp(0.25rem, 1.25vw, 3.0rem);
+    font-family: "futura-pt-bold", sans-serif;
+    color: var(--colortoggle-2);
+    /* outline: 2px solid red; */
+    
 
 }
+
+.CBtextNewsPage:has(span) span{
+    color: #5f0005;
+
+ }
+
+
+
  
 }
 

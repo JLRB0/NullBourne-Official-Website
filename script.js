@@ -14,9 +14,11 @@ function buttonAnimate() {
 }
 
 function buttonAnimateNewsPage() {
-    var element = document.getElementById("buttons-chapters");
+    var element = document.getElementById("buttons-newspage");
     element.classList.toggle('newspagenav');
 }
+
+
 
     
 // Carousel 
