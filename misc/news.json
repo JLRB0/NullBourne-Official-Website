@@ -1,12 +1,19 @@
 [
     {
         "title": "What is NullBourne?",
+        "content": "To be updated... With babbabboey at hand and the big brown dog we have a testement to imagination and poop.",
+        "dateCreated": "Thurs May 02 2024 10:20:36 GMT+0000",
+        "thumbnailUrl": "images/TitlewBG.png",
+        "pageLink": "newspages/newspage.html"
+    },
+    {
+        "title": "What is NullBourne?",
         "content": "To be updated...",
         "dateCreated": "Thurs May 02 2024 10:20:36 GMT+0000",
         "thumbnailUrl": "images/TitlewBG.png",
         "pageLink": "newspages/newspage.html"
     }
-
+    
 ]
 
 

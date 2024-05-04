@@ -163,7 +163,7 @@ html {
     justify-content: center;
     flex-direction: column;
     padding: 10rem;
-    gap: 2em;
+    gap: 2em; 
 }
 
 #videotwo{
@@ -340,10 +340,23 @@ button:hover .Btext {
     /* outline: 2px solid red; */
     left: 25%;
     bottom: -20%;
+    /* background-color: green; */
 
 }
 
-#brand span{
+#chaptersTitle {
+ position: absolute;
+    top: 65%; 
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+
+    font-size: clamp(0.25rem, 1.5vw, 3.0rem);
+    font-family: "futura-pt-bold", sans-serif;
+    color: var(--colortoggle-2);
+
+}
+
+#newsTitle {
     position: absolute;
     top: 65%; 
     left: 50%; /* Center horizontally */
@@ -689,17 +702,19 @@ button:hover .CBtext {
                                                                    
 #newsContainer {
     display: flex;
-    align-items: center;
     flex-direction: column;
     gap: 2em;
     padding-left: 5em;
     padding-right: 5em;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+    /* background-color: green; */
+    
 }
 
 .post {
     display: flex;
-    height: 30vh;
+    height: 40vh;
     color: white;
     border-radius: 20px;
     margin: 5rem;
@@ -742,10 +757,108 @@ button:hover .CBtext {
     font-size: 30px;
 }
 
+/* News Sort UI */
+
+#newsSortMenu{
+    width: 100px;
+    position: absolute;
+    top: 70%; 
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+}
+
+#newsSortButton {
+    display: flex;
+    height: 45px;
+    cursor: pointer;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    /* background-color: #5f0005; */
+}
+
+#newsSortButton span {
+    color: #ffffff;
+    font-family: "futura", sans-serif;
+    font-variant: small-caps;
+    transition: 0.6s;
+    
+
+}
+
+#newsSortButton span:hover {
+    color:#9b0008;
+
+}
+
+#newsSortOptions {
+    /* background-color: #919191; */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px black inset;
+    align-items: center;
+    visibility: hidden;
+
+}
+
+.newsSortItem {
+    cursor: pointer;
+    margin-bottom: 20px;
+    /* background-color: #ffa622; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-variant: small-caps;
+    font-family: "futura", sans-serif;
+    color:#ffffff;
+    font-size: 20px;
+    
+}
+
+
+
+#newsSortMenu.active #newsSortOptions {
+    visibility: visible;
+
+}
+
+#newsSortMenu.active #newsSortButton span {
+    color: #9b0008;
+
+}
+
+.newsSortMenuArrow {
+    transform: rotate(-180deg);
+    transition: .3s;
+}
+
+#newsSortMenu.active .newsSortMenuArrow {
+    transform: rotate(0deg);
+    
+
+}
+
+.newsSortItem:hover{
+    color: #9b0008;
+
+}
+
+
+
+.newsSortMenuArrow{
+    color:#9b0008;
+
+}
+
 /* For nonews UI */
 
-#newsmain {
-    /* background-color: aqua; */
+  /* #newsmain {
+    background-color: aqua;
     display: flex;
     height: 100%;
     justify-content: center;
@@ -754,10 +867,10 @@ button:hover .CBtext {
     top: 0;
     width: 100%;
     
-}
+}  
 
-#nonews{
-    /* background-color: #ffa622; */
+ #nonews{
+    background-color: #ffa622;
     width: fit-content;
     height: fit-content;
 
@@ -776,7 +889,8 @@ button:hover .CBtext {
     transition-duration: 1s;
     cursor:default;
 
-}
+}  */
+
 
 
 
@@ -901,6 +1015,342 @@ button:hover .CBtext {
 
 }
 
+
+                                                                             /* Media Query */
+
+/* Index.html */
+
+@media (max-width: 768px) {
+
+    #about{
+        padding: 0rem;
+        gap: 0em; 
+    }
+
+    #about p {
+        text-align: justify;
+        font-size: clamp(0.7rem, 2vw, 3.6rem);   
+        font-family: "amplitude-compressed", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        line-height:4vw;
+    }
+
+    .Synopsis{
+        padding-left: 2rem;
+    }
+
+    .Psynopsis{
+        /* background-color: blue; */
+        position: relative;
+        z-index: 3;
+        margin-right: 3.5rem;
+        margin-left: 3.5rem;
+        margin-top: 2rem;
+        /* top: 25%; */
+        /* width: 100%; */
+    
+    }
+
+    #buttons {
+        margin-bottom: 5rem;
+    }
+
+    .Btext{
+        visibility: visible; 
+        opacity: 1;
+        font-size: clamp(0.6rem, 1.5vw, 3.0rem);
+    
+    }
+
+
+/* chapters.html */
+
+    /* Top Graphic */
+
+    #chaptersTitle {
+        top: 55%; 
+        left: 50%; /* Center horizontally */    
+        font-size: clamp(0.25rem, 4.5vw, 3.0rem);
+
+    }
+
+    /* NAV Buttons */
+
+.CBtext{
+    visibility: visible; 
+    opacity: 1; 
+
+}
+
+#buttons-chapters.show {
+    transform: translateX(20%);
+    visibility: visible;
+}
+
+#buttons-chapters {
+    /* outline: 2px solid red; */
+    width: max-content;
+    height: 20%;
+    z-index: 5;
+    position: absolute;
+    top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(.1rem, 3vw, 10rem);
+    transition: 300ms ease-in-out;
+    transform: translateX(-300%);
+}
+
+#buttons-chapters svg{
+    width: clamp(.5rem, 6vw, 8rem);
+    height: clamp(.5rem, 6vw, 8rem);
+ 
+ }
+
+ 
+.CBtext{
+    position: absolute;
+    top: 30%; 
+    left: 120%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+    font-size: clamp(0.25rem, 1.7vw, 3.0rem);
+    font-family: "futura-pt-bold", sans-serif;
+    
+
+}
+
+.CBtext.two {
+    
+    left: 175%; /* Center horizontally */
+    
+
+}
+
+     /* NAV Hamburger */
+     
+
+     .hamburger::before,
+     .hamburger::after,
+     .hamburger input{
+         width: clamp(.2rem, 7vw, 10rem);
+
+     }
+
+
+
+ /* news.html */
+
+           /* Top Graphic */
+
+
+    #brand{
+        position: absolute;
+        background-image: url("images/NB_titleB.svg");
+        background-position: left 50% bottom;
+        background-size: cover;   
+        width: 60%;
+        height: 160%;
+        background-repeat: no-repeat;
+        z-index: 3;
+        /* outline: 2px solid red; */
+        left: 20%;
+        bottom: -60%;
+        /* background-color: green; */
+
+    }
+    
+    #newsTitle {
+        top: 55%; 
+        left: 50%; /* Center horizontally */    
+        font-size: clamp(0.25rem, 4.5vw, 3.0rem);
+    
+    }
+
+
+      /* NAV Buttons */
+
+      .CBtext.one.responsive {
+    
+        left: 143%; /* Center horizontally */
+        
+    
+    }
+
+    #newsSortActive {
+        font-size: clamp(0.25rem, 4.5vw, 3.0rem);
+
+    }
+
+    /* NAV Items */
+
+    .newsSortItem {
+        margin-bottom: 30px;
+        font-size: 12px;
+        
+    }
+
+    /* Posts */
+    
+    #newsContainer {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2em;
+        padding-right: 2em;
+        margin-top: 12rem;
+        margin-bottom: 0rem;
+        gap: 0px;
+        /* background-color: pink;         */
+    }
+    
+    .post {
+        display: flex;
+        height: 40vh;
+        color: white;
+        border-radius: 20px;
+        margin: 0rem;
+        /* background-color: black; */
+    }
+
+    
+    .post a {
+        /* background-color: rgb(255, 255, 255); */
+        height: fit-content;
+    }
+    
+    
+    .post .thumbnail {
+        width: 7rem;
+        height: 7rem;
+        background-size: cover;
+        border-radius: 50px;
+        
+        
+        
+    }
+    
+    .post .postInfo {
+        width: 66%;
+        height: 100%;
+        display: flex;
+        font-family: "amplitude-compressed", sans-serif;
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 30px;
+        /* background-color: #ffa622; */
+        /* opacity: 0; */
+    }
+    
+    .post .postTitle {
+        font-family: "futura-pt-bold";
+        font-size: 2rem;
+        /* background-color: #9b0008; */
+    }
+    
+    .post .postDate {
+        font-size: 20px;
+        /* background-color: green; */
+    }
+    
+    .post .postContent {
+        font-size: 20px;
+        margin-right: 12px;
+        /* background-color: aqua; */
+    }
+
+
+
+/* Newspage.html */
+
+    
+.newsarticle {
+
+    display: flex;
+    /* background-color: #5f0005; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+    margin-top: 10%;
+    
+}
+
+.newsPageTitle {
+    display: flex;
+    /* background-color: green; */
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    font-variant: small-caps;    
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+.newsPageTitle h2 {
+    
+    font-family: "futura-pt-bold";
+    font-size: 2.2rem;
+    color: white;
+
+}
+
+.newsarticle figure img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+
+.newsPageContent {
+    /* background-color: #ffa622; */
+    width: 120%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 7%;
+
+}
+
+.newsPageP {
+    width: 105%;
+    height: 100%;
+    /* background-color: aqua; */
+    padding-left: 6%;
+    padding-right: 6%;
+
+
+}
+
+.newsPageP p {
+    font-family: "Amplitude", sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: antiquewhite;
+    
+
+}
+
+        /* NAV */
+    
+#buttons-chapters.newspagenav {
+
+    transform: translate(20%, 150%);
+
+}
+
+.CBtext.one.responsiveNewsPage {
+    left: 143%;
+
+}
+ 
+}
 
 
 
