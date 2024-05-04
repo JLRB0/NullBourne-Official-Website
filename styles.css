@@ -523,80 +523,7 @@ button:hover .CBtext {
 
  }
 
-                /* NewsPage Buttons/NAV */
-
-    
-#buttons-newspage {
-    /* outline: 2px solid red; */
-    width: max-content;
-    height: 20%;
-    z-index: 5;
-    position: absolute;
-    top: 10.5%;
-    display: flex;
-    justify-content: center;
-    gap: clamp(.1rem, 3vw, 10rem);
-    transition: 300ms ease-in-out;
-    transform: translateX(-100%);
-    visibility: hidden;
-}
-
-
-
-#buttons-newspage.newspagenav {
-    transform: translateX(30%);
-    visibility: visible;
-}
-
-#buttons-newspage button{
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-
-}
-
-.CBtextNewsPage{
-    position: absolute;
-    top: 135%; 
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Ensure it's centered */
-
-    visibility: hidden; /* Hidden by default */
-    opacity: 0; /* Make it fully transparent */
-    transition: opacity 0.3s, visibility 0.3s; 
-    font-size: clamp(0.25rem, 1.25vw, 3.0rem);
-    font-family: "futura-pt-bold", sans-serif;
-    color: var(--colortoggle-2);
-    /* outline: 2px solid red; */
-
-}
-
-button:hover .CBtextNewsPage {
-    visibility: visible;
-    opacity: 1;
-}
-
-#buttons-newspage svg{
-    width: clamp(.5rem, 3.5vw, 8rem);
-    height: clamp(.5rem, 3.5vw, 8rem);
- 
- }
-
- .CBtextNewsPage:has(span) span{
-    color: #5f0005;
-
- }
-
- @media (max-width: 700px){
-    #buttons-newspage {
-       
-        gap: clamp(.01rem, .1vw, 10rem);
-        
-    }
-
-
- }
+                
 
  /* CAROUSEL */
 
@@ -1007,14 +934,81 @@ button:hover .CBtextNewsPage {
     z-index: -1;
 } */
 
-            /* NAV */
 
- /* #buttons-chapters.newspagenav {
-    visibility: visible;
-    transform: translateX(30%);
+/* NewsPage Buttons/NAV */
+
     
+#buttons-newspage {
+    /* outline: 2px solid red; */
+    width: max-content;
+    height: 20%;
+    z-index: 5;
+    position: absolute;
+    top: 10.5%;
+    display: flex;
+    justify-content: center;
+    gap: clamp(.1rem, 3vw, 10rem);
+    transition: 300ms ease-in-out;
+    transform: translateX(-100%);
+    visibility: hidden;
+}
 
-} */
+
+
+#buttons-newspage.newspagenav {
+    transform: translateX(30%);
+    visibility: visible;
+}
+
+#buttons-newspage button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.CBtextNewsPage{
+    position: absolute;
+    top: 135%; 
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+
+    visibility: hidden; /* Hidden by default */
+    opacity: 0; /* Make it fully transparent */
+    transition: opacity 0.3s, visibility 0.3s; 
+    font-size: clamp(0.25rem, 1.25vw, 3.0rem);
+    font-family: "futura-pt-bold", sans-serif;
+    color: var(--colortoggle-2);
+    /* outline: 2px solid red; */
+
+}
+
+button:hover .CBtextNewsPage {
+    visibility: visible;
+    opacity: 1;
+}
+
+#buttons-newspage svg{
+    width: clamp(.5rem, 3.5vw, 8rem);
+    height: clamp(.5rem, 3.5vw, 8rem);
+ 
+ }
+
+ .CBtextNewsPage:has(span) span{
+    color: #5f0005;
+
+ }
+
+ @media (max-width: 700px){
+    #buttons-newspage {
+       
+        gap: clamp(.01rem, .1vw, 10rem);
+        
+    }
+
+
+ }
 
 
 /* Body */
@@ -1112,7 +1106,7 @@ button:hover .CBtextNewsPage {
         background-repeat: no-repeat;
         z-index: 3;
         top: -2%;
-        background-position: center;
+        background-position-y: 30%;
         
         
     }
@@ -1437,53 +1431,29 @@ button:hover .CBtextNewsPage {
 
 #buttons-newspage {
     /* outline: 2px solid red; */
-    width: max-content;
-    height: 20%;
-    z-index: 5;
-    position: absolute;
-    top: 10.5%;
-    display: flex;
-    justify-content: center;
-    gap: clamp(.1rem, 3vw, 10rem);
-    transition: 300ms ease-in-out;
-    transform: translateX(-100%);
-    visibility: hidden;
-}
-
-
-#buttons-newspage button{
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-
+    gap: clamp(.1rem, 7vw, 10rem);
+    
 }
 
 
 
 #buttons-newspage.newspagenav {
     transform: translate(25%);
-    visibility: visible;
 }
 
 .CBtextNewsPage {
-    position: absolute;
-    top: 170%; 
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Ensure it's centered */
+    top: 220%; 
     opacity: 1;
     visibility: visible; 
-    font-size: clamp(0.25rem, 1.25vw, 3.0rem);
-    font-family: "futura-pt-bold", sans-serif;
-    color: var(--colortoggle-2);
+    font-size: clamp(0.25rem, 1.8vw, 3.0rem);
     /* outline: 2px solid red; */
     
-
 }
 
-.CBtextNewsPage:has(span) span{
-    color: #5f0005;
-
+#buttons-newspage svg{
+    width: clamp(.5rem, 5vw, 8rem);
+    height: clamp(.5rem, 5vw, 8rem);
+ 
  }
 
 
