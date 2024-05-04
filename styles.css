@@ -1303,7 +1303,7 @@ button:hover .CBtextNewsPage {
         margin-top: 12rem;
         margin-bottom: 0rem;
         gap: 0em;
-        background-color: pink;        
+        /* background-color: pink;         */
     }
     
     .post {
@@ -1316,7 +1316,7 @@ button:hover .CBtextNewsPage {
 
     
     .post a {
-        background-color: rgb(255, 255, 255);
+        /* background-color: rgb(255, 255, 255); */
         height: fit-content;
     }
     
@@ -1332,26 +1332,26 @@ button:hover .CBtextNewsPage {
     
     .post .postInfo {
         gap: 20px;
-        background-color: #ffa622;
+        /* background-color: #ffa622; */
         /* opacity: 0; */
     }
     
     .post .postTitle {
         font-family: "futura-pt-bold";
         font-size: 2rem;
-        background-color: #9b0008;
+        /* background-color: #9b0008; */
     }
     
     .post .postDate {
         font-size: 22px;
-        background-color: green;
+        /* background-color: green; */
     }
     
     .post .postContent {
         font-size: 20px;
         margin-right: 12px;
         line-height: 1.1;
-        background-color: aqua;
+        /* background-color: aqua; */
     }
 
 
