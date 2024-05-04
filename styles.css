@@ -1256,7 +1256,7 @@ button:hover .CBtextNewsPage {
     #brand{
         background-size: cover;   
         width: 60%;
-        left: 23%;
+        left: 22%;
         bottom: -68%;
         /* background-color: green; */
 
@@ -1350,7 +1350,7 @@ button:hover .CBtextNewsPage {
     .post .postContent {
         font-size: 20px;
         margin-right: 12px;
-        line-height: 1.2;
+        line-height: 1.1;
         background-color: aqua;
     }
 
