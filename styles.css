@@ -1118,11 +1118,11 @@ button:hover .CBtextNewsPage {
 
     #about p {
         text-align: justify;
-        font-size: clamp(0.7rem, 2vw, 3.6rem);   
+        font-size: clamp(0.7rem, 4vw, 3.6rem);   
         font-family: "amplitude-compressed", sans-serif;
         font-weight: 400;
         font-style: normal;
-        line-height:4vw;
+        line-height:7vw;
     }
 
     .Synopsis{
@@ -1148,7 +1148,18 @@ button:hover .CBtextNewsPage {
     .Btext{
         visibility: visible; 
         opacity: 1;
-        font-size: clamp(0.6rem, 1.5vw, 3.0rem);
+        font-size: clamp(0.25rem, 3.5vw, 3.0rem);
+    
+    }
+
+    button svg{
+        width: clamp(.5rem, 8vw, 8rem);
+        height: clamp(.5rem, 8vw, 8rem);
+     
+     }
+
+     h2{
+        font-size: clamp(.6rem, 7vw, 9.6rem);  
     
     }
 
@@ -1166,11 +1177,6 @@ button:hover .CBtextNewsPage {
 
     /* NAV Buttons */
 
-.CBtext{
-    visibility: visible; 
-    opacity: 1; 
-
-}
 
 #buttons-chapters.show {
     transform: translateX(20%);
@@ -1183,18 +1189,18 @@ button:hover .CBtextNewsPage {
     height: 20%;
     z-index: 5;
     position: absolute;
-    top: 111px;
+    top: 125px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: clamp(.1rem, 3vw, 10rem);
     transition: 300ms ease-in-out;
-    transform: translateX(-300%);
+    transform: translateX(-400%);
 }
 
 #buttons-chapters svg{
-    width: clamp(.5rem, 6vw, 8rem);
-    height: clamp(.5rem, 6vw, 8rem);
+    width: clamp(.5rem, 8vw, 8rem);
+    height: clamp(.5rem, 8vw, 8rem);
  
  }
 
@@ -1202,17 +1208,18 @@ button:hover .CBtextNewsPage {
 .CBtext{
     position: absolute;
     top: 30%; 
-    left: 120%; /* Center horizontally */
+    left: 135%; /* Center horizontally */
     transform: translateX(-50%); /* Ensure it's centered */
-    font-size: clamp(0.25rem, 1.7vw, 3.0rem);
+    font-size: clamp(0.25rem, 2.5vw, 3.0rem);
     font-family: "futura-pt-bold", sans-serif;
-    
+    visibility: visible; 
+    opacity: 1; 
 
 }
 
 .CBtext.two {
     
-    left: 180%; /* Center horizontally */
+    left: 200%; /* Center horizontally */
     
 
 }
@@ -1262,22 +1269,23 @@ button:hover .CBtextNewsPage {
 
       .CBtext.one.responsive {
     
-        left: 143%; /* Center horizontally */
+        left: 160%; /* Center horizontally */
         
     
     }
+    
 
-    #newsSortActive {
-        font-size: clamp(0.25rem, 4.5vw, 3.0rem);
-
-    }
-
-    /* NAV Items */
+    /* Sort Items */
 
     .newsSortItem {
         margin-bottom: 30px;
         font-size: 12px;
         
+    }
+
+    #newsSortActive {
+        font-size: clamp(0.25rem, 4.5vw, 3.0rem);
+
     }
 
     /* Posts */
@@ -1442,17 +1450,24 @@ button:hover .CBtextNewsPage {
 }
 
 .CBtextNewsPage {
-    top: 220%; 
+    top: 350%; 
     opacity: 1;
     visibility: visible; 
-    font-size: clamp(0.25rem, 1.8vw, 3.0rem);
+    font-size: clamp(0.25rem, 2.5vw, 3.0rem);
     /* outline: 2px solid red; */
     
 }
 
+#chaptersnewsPageWeirdButton {
+    left: 4%;
+
+}
+
+
+
 #buttons-newspage svg{
-    width: clamp(.5rem, 5vw, 8rem);
-    height: clamp(.5rem, 5vw, 8rem);
+    width: clamp(.5rem, 8vw, 8rem);
+    height: clamp(.5rem, 8vw, 8rem);
  
  }
 
