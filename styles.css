@@ -1303,7 +1303,7 @@ button:hover .CBtextNewsPage {
     
     .post {
         display: flex;
-        height: 40vh;
+        height: 35vh;
         color: white;
         border-radius: 20px;
         margin: 0rem;
@@ -1333,7 +1333,7 @@ button:hover .CBtextNewsPage {
         display: flex;
         font-family: "amplitude-compressed", sans-serif;
         flex-direction: column;
-        gap: 30px;
+        gap: 20px;
         padding-left: 30px;
         /* background-color: #ffa622; */
         /* opacity: 0; */
@@ -1346,12 +1346,12 @@ button:hover .CBtextNewsPage {
     }
     
     .post .postDate {
-        font-size: 20px;
+        font-size: 22px;
         /* background-color: green; */
     }
     
     .post .postContent {
-        font-size: 20px;
+        font-size: 25px;
         margin-right: 12px;
         /* background-color: aqua; */
     }
@@ -1439,7 +1439,7 @@ button:hover .CBtextNewsPage {
 
 #buttons-newspage {
     /* outline: 2px solid red; */
-    gap: clamp(.1rem, 7vw, 10rem);
+    gap: clamp(.1rem, 8.5vw, 10rem);
     
 }
 
