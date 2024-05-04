@@ -1359,6 +1359,7 @@ button:hover .CBtextNewsPage {
     .post .postContent {
         font-size: 20px;
         margin-right: 12px;
+        line-height: 1.2;
         /* background-color: aqua; */
     }
 
@@ -1452,7 +1453,7 @@ button:hover .CBtextNewsPage {
 
 
 #buttons-newspage.newspagenav {
-    transform: translate(25%);
+    transform: translate(20%);
 }
 
 .CBtextNewsPage {
