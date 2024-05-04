@@ -8,20 +8,20 @@ function navigateToPage(url) {
 
 // Video autoplay on IOS
 
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     var video = document.getElementById('video');
-    var playPromise = video.play();
-
-    if (playPromise !== undefined) {
-        playPromise.then(_ => {
-            // Automatic playback started!
-            console.log('Autoplay started!');
-        }).catch(error => {
-            // Autoplay was prevented.
-            // This catch block can remain empty since the video is already muted and set to autoplay.
-            console.log('Autoplay was prevented:', error);
-        });
+    function tryPlayVideo() {
+        var playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.then(function() {
+                console.log('Autoplay started successfully');
+            }).catch(function(error) {
+                console.log('Autoplay was prevented. Retrying...', error);
+                setTimeout(tryPlayVideo, 100); // Retry after a short delay
+            });
+        }
     }
+    tryPlayVideo();
 });
 
 // Navs Button Animate In

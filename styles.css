@@ -127,6 +127,8 @@ html {
     display: flex;
     height: 120vh;
     object-fit: cover;
+    pointer-events: none;
+    
 
 }
 
@@ -176,6 +178,7 @@ html {
     object-fit: cover;
     left: 0;
     top: 0;
+    pointer-events: none;
 }
 
 #overlaytwo {
@@ -301,6 +304,7 @@ button:hover .Btext {
     z-index: -1;
     height: 100%;
     outline: 2px solid red;
+    pointer-events: none;
 }
 
 /* #overlay3 {
@@ -694,6 +698,7 @@ button:hover .CBtext {
     z-index: -1;
     height: 100%;
     outline: 2px solid red;
+    pointer-events: none;
 }
 
 #headerNews{
@@ -913,6 +918,7 @@ button:hover .CBtext {
     z-index: -1;
     height: 100%;
     outline: 2px solid red;
+    pointer-events: none;
 }
 
 
