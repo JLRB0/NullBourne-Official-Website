@@ -1094,7 +1094,7 @@ button:hover .CBtext {
     height: 20%;
     z-index: 5;
     position: absolute;
-    top: 6rem;
+    top: 111px;
     display: flex;
     flex-direction: column;
     justify-content: center;
