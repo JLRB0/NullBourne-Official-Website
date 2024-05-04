@@ -1357,7 +1357,7 @@ button:hover .CBtextNewsPage {
     }
     
     .post .postContent {
-        font-size: 25px;
+        font-size: 20px;
         margin-right: 12px;
         /* background-color: aqua; */
     }
@@ -1445,7 +1445,7 @@ button:hover .CBtextNewsPage {
 
 #buttons-newspage {
     /* outline: 2px solid red; */
-    gap: clamp(.1rem, 8.5vw, 10rem);
+    gap: clamp(.1rem, 7.5vw, 10rem);
     
 }
 
