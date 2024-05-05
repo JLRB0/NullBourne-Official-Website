@@ -891,8 +891,8 @@ button:hover .CBtext {
 
 /* For nonews UI */
 
-  /* #newsmain {
-    background-color: aqua;
+  #newsmain {
+    /* background-color: aqua; */
     display: flex;
     height: 100%;
     justify-content: center;
@@ -904,7 +904,7 @@ button:hover .CBtext {
 }  
 
  #nonews{
-    background-color: #ffa622;
+    /* background-color: #ffa622; */
     width: fit-content;
     height: fit-content;
 
@@ -923,7 +923,7 @@ button:hover .CBtext {
     transition-duration: 1s;
     cursor:default;
 
-}  */
+} 
 
 
 
