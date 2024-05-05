@@ -1366,7 +1366,8 @@ button:hover .CBtextNewsPage {
         font-size: 5vw;
         /* margin-right: 12px; */
         line-height: 1.1;
-        /* background-color: aqua; */
+        background-color: aqua;
+        height: 11vh;
         width: fit-content;
         margin-right: 3vw;
         -webkit-line-clamp: 4; /* number of lines to show */
