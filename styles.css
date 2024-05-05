@@ -540,12 +540,19 @@ button:hover .CBtext {
     justify-content: center;
 
  }
+ 
+ #carouselBody {
+    display: flex;
+    /* background-color: #5f0005; */
+    flex-direction: column;
+    /* align-items: flex-end; */
+    height: 90%;
 
+ }
 
  #chapters{
     max-width: 1200px;
     width: 95%;
-    margin-top: 90px;
     /* background-color: #5f0005; */
  }
 
@@ -776,11 +783,12 @@ button:hover .CBtext {
     overflow: hidden;
     width: 40vw;
 
-    /* ellipses show */
+    /* Doesnt work */
+    /* ellipses show
     display: -webkit-box; 
-    -webkit-line-clamp: 3; /* number of lines to show */
-    line-clamp: 3; 
-    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; number of lines to show */
+    /* line-clamp: 3; 
+    -webkit-box-orient: vertical; */
 }
 
 /* News Sort UI */
@@ -1366,12 +1374,14 @@ button:hover .CBtextNewsPage {
         font-size: 5vw;
         /* margin-right: 12px; */
         line-height: 1;
+        height: 10vh;
         /* background-color: aqua; */
-        height: 15vh;
         width: fit-content;
         margin-right: 3vw;
-        -webkit-line-clamp: 4; /* number of lines to show */
-        line-clamp: 4; 
+
+        /* Doesnt work */
+        /* -webkit-line-clamp: 4; number of lines to show */
+        /* line-clamp: 4;  */
     }
 
 

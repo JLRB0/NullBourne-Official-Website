@@ -6,23 +6,23 @@ function navigateToPage(url) {
     window.location.href = url;
 }
 
-// Video autoplay on IOS
+// // Video autoplay on IOS
 
-document.addEventListener('DOMContentLoaded', function () {
-    var video = document.getElementById('video');
-    function tryPlayVideo() {
-        var playPromise = video.play();
-        if (playPromise !== undefined) {
-            playPromise.then(function() {
-                console.log('Autoplay started successfully');
-            }).catch(function(error) {
-                console.log('Autoplay was prevented. Retrying...', error);
-                setTimeout(tryPlayVideo, 100); // Retry after a short delay
-            });
-        }
-    }
-    tryPlayVideo();
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//     var video = document.getElementById('video');
+//     function tryPlayVideo() {
+//         var playPromise = video.play();
+//         if (playPromise !== undefined) {
+//             playPromise.then(function() {
+//                 console.log('Autoplay started successfully');
+//             }).catch(function(error) {
+//                 console.log('Autoplay was prevented. Retrying...', error);
+//                 setTimeout(tryPlayVideo, 100); // Retry after a short delay
+//             });
+//         }
+//     }
+//     tryPlayVideo();
+// });
 
 // Navs Button Animate In
 
