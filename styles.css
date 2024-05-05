@@ -771,7 +771,7 @@ button:hover .CBtext {
 
 .post .postContent {
     font-size: 30px;
-    background-color: rgb(200, 255, 0);
+    /* background-color: rgb(200, 255, 0); */
     height: 10vh;
     overflow: hidden;
     width: 40vw;
@@ -1310,7 +1310,7 @@ button:hover .CBtextNewsPage {
         margin-top: 12rem;
         margin-bottom: 0rem;
         gap: 1em;
-        background-color: pink;        
+        /* background-color: pink;         */
     }
     
     .post {
@@ -1318,13 +1318,13 @@ button:hover .CBtextNewsPage {
         height: 18rem;
         color: white;
         /* margin-left: 10rem; */
-        background-color: black;
+        /* background-color: black; */
         margin: 0rem;
     }
 
     
     .post a {
-        background-color: rgb(255, 255, 255);
+        /* background-color: rgb(255, 255, 255); */
         height: fit-content;
         margin-left: 20px;
     }
@@ -1341,7 +1341,7 @@ button:hover .CBtextNewsPage {
     
     .post .postInfo {
         gap: 5vw;
-        background-color: #ffa622;
+        /* background-color: #ffa622; */
         /* opacity: 0; */
         padding-left: 10px;
         
@@ -1351,14 +1351,14 @@ button:hover .CBtextNewsPage {
     .post .postTitle {
         font-family: "futura-pt-bold";
         font-size: 8.5vw;
-        background-color: #9b0008;
+        /* background-color: #9b0008; */
         width: fit-content;
         margin-right: 3vw;
     }
     
     .post .postDate {
         font-size: 5vw;
-        background-color: green;
+        /* background-color: green; */
         width: fit-content;
     }
     
@@ -1366,7 +1366,7 @@ button:hover .CBtextNewsPage {
         font-size: 5vw;
         /* margin-right: 12px; */
         line-height: 1.1;
-        background-color: aqua;
+        /* background-color: aqua; */
         width: fit-content;
         margin-right: 3vw;
         -webkit-line-clamp: 4; /* number of lines to show */
