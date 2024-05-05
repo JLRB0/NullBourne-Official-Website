@@ -728,7 +728,7 @@ button:hover .CBtext {
     height: 40vh;
     color: white;
     border-radius: 20px;
-    /* margin: 5rem; */
+    margin: 5rem;
     /* background-color: rgb(255, 255, 255); */
 }
 
@@ -1199,7 +1199,7 @@ button:hover .CBtextNewsPage {
     height: 20%;
     z-index: 5;
     position: absolute;
-    top: 125px;
+    top: 15vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1300,28 +1300,30 @@ button:hover .CBtextNewsPage {
         padding-right: 0em;
         margin-top: 12rem;
         margin-bottom: 0rem;
-        gap: 0em;
+        gap: 1em;
         background-color: pink;        
     }
     
     .post {
         display: flex;
-        height: 35vh;
+        height: 18rem;
         color: white;
         /* margin-left: 10rem; */
         background-color: black;
+        margin: 0rem;
     }
 
     
     .post a {
         background-color: rgb(255, 255, 255);
         height: fit-content;
+        margin-left: 20px;
     }
     
     
     .post .thumbnail {
-        width: 45vw;
-        height: 45vw;
+        width: 38vw;
+        height: 38vw;
         background-size: cover;
         
         
@@ -1329,9 +1331,11 @@ button:hover .CBtextNewsPage {
     }
     
     .post .postInfo {
-        gap: 10vw;
+        gap: 5vw;
         background-color: #ffa622;
         /* opacity: 0; */
+        padding-left: 10px;
+        
         
     }
     
@@ -1339,11 +1343,14 @@ button:hover .CBtextNewsPage {
         font-family: "futura-pt-bold";
         font-size: 8.5vw;
         background-color: #9b0008;
+        width: fit-content;
+        margin-right: 3vw;
     }
     
     .post .postDate {
         font-size: 5vw;
         background-color: green;
+        width: fit-content;
     }
     
     .post .postContent {
@@ -1351,6 +1358,8 @@ button:hover .CBtextNewsPage {
         /* margin-right: 12px; */
         line-height: 1.1;
         background-color: aqua;
+        width: fit-content;
+        margin-right: 3vw;
     }
 
 
