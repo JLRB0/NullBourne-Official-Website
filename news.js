@@ -1,6 +1,8 @@
 
 "use strict";
 
+// Change version in html files when updating this
+
 var NEWS_ENDPOINT = "misc/news.json";
 var NEWS_PINNED_ENDPOINT = "misc/news_pinned.json";
 var NEWS_OLDEST_ENDPOINT = "misc/news_oldest.json";
@@ -42,26 +44,27 @@ const news_Sort_Menu = document.querySelector("#newsSortMenu"),
 $(document).ready(function() {
     fetchPosts(NEWS_ENDPOINT); // Load the default news on page load
 });
-    // Make the AJAX request to news.json.
+    // Make the AJAX request to news.json. ++ Implemented cachebuster to keep it up-to-date
     function fetchPosts(url) {
+        const cacheBuster = `?v=${new Date().getTime()}`;
         $.ajax({
-            url: url,
+            url: url + cacheBuster,
             dataType: "json",
             success: function(data) {
                 newsContainer.innerHTML = "";
                 data.forEach(post => {
                     var postElement = `
                         <div class="post">
-                            <a href="${post.pageLink}"><img class="thumbnail" src="${post.thumbnailUrl}"></img></a>
-                            <div class="postInfo">
-                                <h1 class="postTitle">${post.title}</h1>
-                                <h4 class="postDate">${new Date(post.dateCreated).toLocaleDateString({
-                                    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
-                                })}</h4>
-                                <p class="postContent">${post.content}</p>
-                            </div>
+                        <a href="${post.pageLink}"><img class="thumbnail" src="${post.thumbnailUrl}"></img></a>
+                        <div class="postInfo">
+                            <a href="${post.pageLink}"><h1 class="postTitle">${post.title}</h1></a>
+                            <h4 class="postDate">${new Date(post.dateCreated).toLocaleDateString({
+                                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+                            })}</h4>
+                            <a href="${post.pageLink}"><p class="postContent">${post.content}</p></a>
                         </div>
-                    `;
+                    </div>
+                `;
                     newsContainer.innerHTML += postElement;
                 });
             }

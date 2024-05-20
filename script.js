@@ -1,5 +1,7 @@
 "use strict";
 
+// Change version in html files when updating this
+
 // Landing page links
 
 function navigateToPage(url) {
@@ -48,42 +50,6 @@ const initSlider = () => {
     const maxScrollLeft = chaptersList.scrollWidth - chaptersList.clientWidth;
     const chapters = document.querySelectorAll('.chapters-list .centerchapter img');
 
-    // allow dragging on images; doesnt activate pdf; still allows legit clicks on images
-
-    let isDragging = false;
-    let startPos = null;
-
-
-    chaptersList.addEventListener('mousedown', (e) => {
-        isDragging = false;
-        startPos = { x: e.clientX, y: e.clientY };
-    });
-    
-    chaptersList.addEventListener('mousemove', (e) => {
-        if (!startPos) return;
-        if (Math.abs(startPos.x - e.clientX) > 10 || Math.abs(startPos.y - e.clientY) > 10) {
-            isDragging = true;
-        }
-    });
-    
-    chaptersList.addEventListener('mouseup', () => {
-        startPos = null;
-    });
-    
-            // Preventing click on anchor if dragging has occurred
-            
-        const chapterLinks = document.querySelectorAll('.centerchapter a');
-        
-        chapterLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (isDragging) {
-                    e.preventDefault();
-                }
-                // Resetting isDragging after click
-                isDragging = false;
-            });
-        });
-
 
     // hover over image element animations
 
@@ -100,14 +66,26 @@ const initSlider = () => {
 
     // Drag the carousel with cursor
 
+    let isDragging = false;
     let isMouseDown = false;
     let startX;
     let scrollLeft;
 
     chaptersList.addEventListener('mousedown', (e) => {
         isMouseDown = true;
-        startX = e.pageX;
+        isDragging = false;
+        startX = e.pageX - chaptersList.offsetLeft;
         scrollLeft = chaptersList.scrollLeft;
+        e.preventDefault(); // Prevent image dragging
+    });
+
+    chaptersList.addEventListener('mousemove', (e) => {
+        if (!isMouseDown) return;
+        isDragging = true;
+        e.preventDefault(); // Prevent default behavior during dragging
+        const x = e.pageX - chaptersList.offsetLeft;
+        const walk = (x - startX);
+        chaptersList.scrollLeft = scrollLeft - walk;
     });
 
     chaptersList.addEventListener('mouseup', () => {
@@ -118,13 +96,15 @@ const initSlider = () => {
         isMouseDown = false;
     });
 
-    chaptersList.addEventListener('mousemove', (e) => {
-        if(!isMouseDown) return;
-        e.preventDefault();
-        const x = e.pageX;
-        const walk = (x - startX);
-        chaptersList.scrollLeft = scrollLeft - walk;
+    const chapterLinks = document.querySelectorAll('.centerchapter a');
 
+    chapterLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            if (isDragging) {
+                e.preventDefault();
+                isDragging = false; // Reset dragging state after preventing default
+            }
+        });
     });
 
     // scrollbar thumb drag

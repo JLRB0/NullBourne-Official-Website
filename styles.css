@@ -167,7 +167,12 @@ html {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 10rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+
+
     gap: 2em; 
 }
 
@@ -273,8 +278,8 @@ button svg{
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Ensure it's centered */
 
-    visibility: hidden; /* Hidden by default */
-    opacity: 0; /* Make it fully transparent */
+    visibility: visible; /* Hidden by default */
+    opacity: 1; /* Make it fully transparent */
     transition: opacity 0.3s, visibility 0.3s; 
     font-size: clamp(0.25rem, 1.5vw, 3.0rem);
     font-family: "futura-pt-bold", sans-serif;
@@ -284,7 +289,7 @@ button svg{
 }
 
 .Btext:has(span) span{
-    color: #5f0005;
+    color: #9b0008;
 
  }
 
@@ -293,6 +298,34 @@ button:hover .Btext {
     opacity: 1;
 }
 
+/* Footer */
+
+footer div {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    z-index: 1000;
+    /* background-color: #ffa622; */
+    margin-top: 10%;
+    gap: 5%;
+    
+
+
+}
+
+svg {
+    width: clamp(2rem, 6vw, 5rem);
+    /* background-color: #5f0005; */
+    z-index: 1000;
+    height: auto;
+}
+
+.bluesky {
+    width: clamp(2rem, 6vw, 5rem);
+    height: auto;
+    padding-bottom: 7px;
+
+}
 
 
                                                                    /* Chapters PAGE */
@@ -516,7 +549,7 @@ button:hover .CBtext {
  }
 
  .CBtext:has(span) span{
-    color: #5f0005;
+    color: #9b0008;
 
  }
 
@@ -769,6 +802,7 @@ button:hover .CBtext {
     font-family: "futura-pt-bold";
     font-size: 50px;
     /* background-color: rgb(0, 183, 255); */
+    cursor: pointer;
 }
 
 .post .postDate {
@@ -782,6 +816,8 @@ button:hover .CBtext {
     height: 10vh;
     overflow: hidden;
     width: 40vw;
+    cursor: pointer;
+    
 
     /* Doesnt work */
     /* ellipses show
@@ -789,6 +825,12 @@ button:hover .CBtext {
     -webkit-line-clamp: 3; number of lines to show */
     /* line-clamp: 3; 
     -webkit-box-orient: vertical; */
+}
+
+.post a {
+    text-decoration: none;
+    color: inherit;
+
 }
 
 /* News Sort UI */
@@ -891,8 +933,9 @@ button:hover .CBtext {
 
 /* For nonews UI */
 
+/* 
   #newsmain {
-    /* background-color: aqua; */
+    background-color: aqua;
     display: flex;
     height: 100%;
     justify-content: center;
@@ -904,7 +947,7 @@ button:hover .CBtext {
 }  
 
  #nonews{
-    /* background-color: #ffa622; */
+    background-color: #ffa622;
     width: fit-content;
     height: fit-content;
 
@@ -926,6 +969,7 @@ button:hover .CBtext {
 
 } 
 
+ */
 
 
 
@@ -939,7 +983,7 @@ button:hover .CBtext {
     position: fixed; /* Keeps the video in the same position in the viewport no matter what. A fixed position. SOLVED the BG video bug whitespace overflow -> still there this is a workaround. */
     z-index: -1;
     height: 100%;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
     pointer-events: none;
 }
 
@@ -1024,7 +1068,7 @@ button:hover .CBtextNewsPage {
  }
 
  .CBtextNewsPage:has(span) span{
-    color: #5f0005;
+    color: #9b0008;
 
  }
 
@@ -1062,8 +1106,8 @@ button:hover .CBtextNewsPage {
 .newsPageTitle {
     display: flex;
     /* background-color: green; */
-    width: 1000px;
-    height: 100px;
+    width: fit-content;
+    height: auto;
     justify-content: center;
     align-items: center;
     font-variant: small-caps;    
@@ -1072,8 +1116,8 @@ button:hover .CBtextNewsPage {
 
 .newsPageTitle h2 {
     
-    font-family: "futura-pt-bold";
-    font-size: 6rem;
+    font-family: "futura-pt-bold", sans-serif;
+    font-size: clamp(.5rem, 6vw, 10rem);
     color: white;
 
 }
@@ -1084,7 +1128,7 @@ button:hover .CBtextNewsPage {
 } */
 
 .newsarticle figure img {
-    width: 1000px;
+    width: clamp(1.2rem, 99vw, 1000rem);
     height: auto;
     position: relative;
 }
@@ -1100,6 +1144,26 @@ button:hover .CBtextNewsPage {
 
 }
 
+.newsPageContent h3 {
+
+    font-size: clamp(1.2rem, 4vw, 7.5rem);
+    color: antiquewhite;
+    font-family: "futura-pt-bold",sans-serif;
+    
+}
+
+.newsPageContent h4 {
+
+    font-size: clamp(1rem, 3.9vw, 6rem);
+    color: antiquewhite;
+    font-variant: small-caps;
+    margin-top: 5%;
+    margin-left: 3%;
+    font-weight: 600;
+    font-family: "futura-pt-bold", sans-serif;
+
+}
+
 .newsPageP {
     width: 85%;
     height: 50%;
@@ -1111,17 +1175,130 @@ button:hover .CBtextNewsPage {
 
 .newsPageP p {
     font-family: "Amplitude", sans-serif;
-    font-size: 27px;
+    font-size: clamp(.9rem, 2.2vw, 4.5rem);
     line-height: 1.7;
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
+    margin-top: 5%;
     
 
 }
 
+.newsPageP ul {
+    list-style-type: disc;
+    padding-left: 8%;
+    padding-top: 5%;
+}
+
+.newsPageP ul ul {
+    list-style-type: circle;
+
+}
+
+.midh3 {
+    margin-top: 10%;
+
+}
+
+
+.newsPageP li {
+    color: #ffffff;
+    margin-bottom: 3%;
+    line-height: 1.2;
+    font-family: "Amplitude", sans-serif;
+    font-size: clamp(.9rem, 2.2vw, 4.5rem);
+
+
+}
+
+.newspagebodyimgdiv_1 {
+    display: flex;
+    /* background-color: #5f0005; */
+    justify-content: center;
+    margin-top: 3%;
+
+
+}
+
+.newspagebodyimg_1 {
+    width: 90%;
+    height: auto;
+
+}
+
+.newsPageP .newspagebodyimglist {
+    margin-bottom: 10%;
+
+
+}
+
+.colorstyle1 {
+
+    color: antiquewhite;
+}
+
+.textstyle1 {
+    font-weight: bold;
+    color: var(--colortoggle-3);
+
+}
+
+.textstyle2 {
+    font-weight: bold;
+    color: var(--colortoggle-3);
+    
+
+}
+
+.textstyle3 {
+    font-weight: bold;
+    color: var(--colortoggle-3);
+}
+
+a.scope-style-color {
+    color: antiquewhite;
+    
+}
+
+a.scope-style-color:visited {
+    color: antiquewhite;
+    
+}
 
                                                                                              /* Media Query */
 
-/* Index.html */
+
+
+@media (max-width: 768px) {
+
+     /* footer - home */
+
+
+     footer {
+        margin-top: 6%;
+        padding-bottom: 5%;
+    
+    
+    }
+    
+
+}
+
+@media (max-width: 600px) {
+
+    /* footer - home */
+
+
+    footer {
+       margin-top: 0%;
+       padding-bottom: 5%;
+   
+   
+   }
+   
+
+}
+
+/* home.html */
 
 @media (max-width: 768px) {
 
@@ -1190,6 +1367,8 @@ button:hover .CBtextNewsPage {
         font-size: clamp(.6rem, 7vw, 9.6rem);  
     
     }
+
+   
 
 
 /* chapters.html */
@@ -1385,10 +1564,11 @@ button:hover .CBtextNewsPage {
         /* line-clamp: 4;  */
     }
 
-
+}
 
 /* Newspage.html */
 
+@media (max-width: 900px) {
     
 .newsarticle {
 
@@ -1422,7 +1602,7 @@ button:hover .CBtextNewsPage {
 .newsPageTitle h2 {
     
     font-family: "futura-pt-bold";
-    font-size: 2.2rem;
+    font-size: clamp(.5rem, 8vw, 8rem);
     color: white;
 
 }
@@ -1456,9 +1636,8 @@ button:hover .CBtextNewsPage {
 
 .newsPageP p {
     font-family: "Amplitude", sans-serif;
-    font-size: 18px;
     line-height: 1.7;
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     
 
 }
