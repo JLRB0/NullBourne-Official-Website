@@ -1,0 +1,30 @@
+
+RewriteOptions inherit
+
+RewriteEngine On
+
+# Explicitly serve chapters.html for the /chapters URL
+RewriteRule ^chapters$ /chapters.html [L]
+
+# Rewrite any request for a URL without an extension to the corresponding .html file
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
+
+# Redirect from .html to URL without extension
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^/?$ "https\:\/\/nullbourne\.com\/home" [R=301,L]
+
+<FilesMatch "^misc/.*\.json$">
+    FileETag None
+    <IfModule mod_headers.c>
+        Header unset ETag
+        Header set Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+    </IfModule>
+</FilesMatch>
+
+
