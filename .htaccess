@@ -1,7 +1,14 @@
-
 RewriteOptions inherit
 
 RewriteEngine On
+
+# Ensure favicon is served from the root
+RewriteCond %{REQUEST_URI} !^/favicon.ico$
+RewriteRule ^favicon.ico$ /favicon.ico [L]
+
+# Ensure site.webmanifest is served from the root
+RewriteCond %{REQUEST_URI} !^/site.webmanifest$
+RewriteRule ^site.webmanifest$ /site.webmanifest [L]
 
 # Explicitly serve chapters.html for the /chapters URL
 RewriteRule ^chapters$ /chapters.html [L]
@@ -21,10 +28,5 @@ RewriteRule ^/?$ "https\:\/\/nullbourne\.com\/home" [R=301,L]
     FileETag None
     <IfModule mod_headers.c>
         Header unset ETag
-        Header set Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
-        Header set Pragma "no-cache"
-        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
     </IfModule>
 </FilesMatch>
-
-

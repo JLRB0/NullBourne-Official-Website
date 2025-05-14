@@ -92,7 +92,9 @@ body {
 html {
     scroll-behavior: smooth;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;  /* allows expansion beyond the viewport if needed */
+  height: auto;       /* ensure they can grow */
+  overflow-y: auto; 
     /* overflow-x: hidden;  Gets rid of small weird horizontal scrolling in News.html  */
 }
 
@@ -108,6 +110,40 @@ html {
 
 
                                                                    /* Landing/Welcome PAGE */
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #010616; /* Ensure it matches your background color */
+    z-index: 1000; /* Ensure it sits above all other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Loader animation */
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #5f0005; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
 .hide {
     visibility: hidden;
 
@@ -230,8 +266,10 @@ h2{
 
 }
 
-.Psynopsis p:nth-child(2){
-    padding-top: clamp(0.5rem, 1.5vw, 2rem);
+#about p:nth-child(1){
+    text-align: center;
+    word-spacing: clamp(0.1rem, 0.25vw, 1rem); 
+    /* color: antiquewhite; */
 
 }
 
@@ -288,7 +326,7 @@ button svg{
 
 }
 
-.Btext:has(span) span{
+#WIP {
     color: #9b0008;
 
  }
@@ -443,7 +481,7 @@ svg {
 
 }
 
-.hamburger:has(:hover)::before{
+/* .hamburger:has(:hover)::before{
     background-color: var(--color-hover);
 
 }
@@ -456,7 +494,7 @@ svg {
 .hamburger:has(:hover) input{
     background-color: var(--color-hover);
 
-}
+} */
 
 .hamburger:has(input:checked)::after {
     rotate: 45deg;
@@ -567,21 +605,20 @@ button:hover .CBtext {
 
            /* CAROUSEL */
 
- main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main {
+  display: block; /* or remove display: flex entirely */
+  /* or if you do need flex for some reason: */
+  /* align-items: flex-start; */
+  /* justify-content: center; */
+}
 
- }
- 
- #carouselBody {
+#carouselBody {
     display: flex;
-    /* background-color: #5f0005; */
-    flex-direction: column;
-    /* align-items: flex-end; */
-    height: 90%;
-
- }
+    justify-content: center;  /* horizontally center */
+    align-items: flex-start;  /* or center, if you want vertical centering too */
+  }
+  
+  
 
  #chapters{
     max-width: 1200px;
@@ -595,6 +632,13 @@ button:hover .CBtext {
     top: 3rem;
  }
 
+ /*
+
+ .chapters-list {
+  overflow-y: visible;
+}
+
+
 .chapters-list .centerchapter img {
     transition: transform 0.5s, opacity 0.5s;
     opacity: 0.8;
@@ -606,6 +650,45 @@ button:hover .CBtext {
     opacity: 1;
     cursor: pointer;
 }
+
+  
+
+.centerchapter img {
+    max-width: 70%;
+    height: auto;
+}
+
+*/
+
+
+.img-wrapper {
+    position: relative;
+    overflow: visible;
+  }
+  
+  .img-wrapper img {
+
+    max-width: 65%;
+    height: auto;
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0.8;
+    position: relative;
+    z-index: 1;
+  }
+
+  
+  .img-wrapper:hover img {
+    transform: scale(1.1); /* enlarge from current position */
+    transform-origin: top top; /* ensures it scales from the center */
+    opacity: 1;
+    cursor: pointer;
+    z-index: 10000; /* keep above siblings */
+  }
+  
+  .centerchapter {
+    overflow: hidden; /* if you have an overflow rule here, ensure it’s visible */
+  }
+  
 
 
 
@@ -639,13 +722,14 @@ button:hover .CBtext {
  }
 
 .chapters-list{
+    align-items: center; 
     display: grid;
     grid-template-columns: repeat(6, 440px);
     overflow-x: auto;
     font-size: 0;
     margin-bottom: 30px;
-    overflow-y: hidden;
     scrollbar-width: none;
+ 
 
 }
 
@@ -933,9 +1017,9 @@ button:hover .CBtext {
 
 /* For nonews UI */
 
-/* 
+
   #newsmain {
-    background-color: aqua;
+    /* background-color: aqua; */
     display: flex;
     height: 100%;
     justify-content: center;
@@ -947,7 +1031,7 @@ button:hover .CBtext {
 }  
 
  #nonews{
-    background-color: #ffa622;
+    /* background-color: #ffa622; */
     width: fit-content;
     height: fit-content;
 
@@ -969,7 +1053,7 @@ button:hover .CBtext {
 
 } 
 
- */
+ 
 
 
 
@@ -1381,6 +1465,19 @@ a.scope-style-color:visited {
         font-size: clamp(0.25rem, 4.5vw, 3.0rem);
 
     }
+
+    /* Chapter Thumbails */
+
+    .img-wrapper img {
+        opacity: 1;
+        
+      }
+    
+      
+      .img-wrapper:hover img {
+        transform: none;
+        
+      }
 
     /* NAV Buttons */
 
